@@ -86,34 +86,37 @@ def CannyThreshold(lowThreshold):
 	
 	
 
-def main():
-	#init vars	
-	lowThreshold = 0
-	max_lowThreshold = 100
-	ratio = 12
-	kernel_size = 3
 
 
-	#read in image from file
-	img = cv2.imread('image1.jpg')
+#########PROGRAM START############
+
+#init vars	
+lowThreshold = 0
+max_lowThreshold = 100
+ratio = 12
+kernel_size = 3
 
 
-	#open windows that display image data at different stages					
-	cv2.namedWindow('canny demo2')
-	cv2.namedWindow('canny demo')
+#read in image from file
+img = cv2.imread('image3.JPG')
 
 
-
-	cv2.imshow('e2',img)
-	gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-	tempgray = gray
-	height, width, depth = img.shape
-	gray = boxer(gray)
-	CannyThreshold(66)
-	if cv2.waitKey(0)==27:
-		cv2.destroyAllWindows()
+#open windows that display image data at different stages					
+cv2.namedWindow('canny demo2')
+cv2.namedWindow('canny demo')
 
 
 
-main()
+cv2.imshow('e2',img)
+gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+tempgray = gray
+height, width, depth = img.shape
+gray = boxer(gray)
+CannyThreshold(66)
+if cv2.waitKey(0)==27:
+	cv2.destroyAllWindows()
+
+
+
+
 
